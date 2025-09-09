@@ -1,0 +1,12 @@
+
+class Solution {
+  public:
+    int maximumProfit(vector<int> &arr) {
+        // code here
+        long long profit = 0;
+        for(int i=1; i<arr.size(); i++){
+            if(arr[i]>arr[i-1]) profit += arr[i]-arr[i-1];
+        }
+        return profit;
+    }
+};
